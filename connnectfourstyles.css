@@ -1,0 +1,64 @@
+*, *::after, *::before {
+    margin: 0;
+    padding:0;
+
+}
+html {
+    background-image: url(....);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5vh;
+    margin: 2.5vh;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkblue;
+}
+
+#board {
+    padding-top: 10vmin;
+    width: 70vmin;
+    height: 60vmin;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    
+}
+
+.cell {
+    border: 1px dotted white;
+    display: flex;
+}
+
+.piece {
+    border-radius: 50%;
+    
+    flex-grow: 1;
+
+}
+
+.piece[data-player="1"] {
+    background-color: red;
+
+
+}
+
+.piece[data-player="2"] {
+    background-color: yellow;
+
+
+}
+
+.piece[data-placed="false"] {
+    transform: translateY(-10vmin);
+}
